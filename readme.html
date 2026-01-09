@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alberto Drake | Ethical Hacker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CONFIGURATION & VARIABLES --- */
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --purple: #bc8cff;
+            --green: #238636;
+            --terminal-bg: #010409;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Matrix Background Effect */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(88, 166, 255, 0.08), transparent 25%), 
+                radial-gradient(circle at 85% 30%, rgba(188, 140, 255, 0.08), transparent 25%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            padding: 40px 20px;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 { font-size: 2.5rem; text-align: center; margin-bottom: 5px; background: linear-gradient(to right, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { border-left: 5px solid var(--purple); padding-left: 15px; margin: 40px 0 20px; color: var(--text-main); }
+        .bio { text-align: center; font-style: italic; color: var(--text-muted); margin-bottom: 30px; }
+        
+        /* --- TERMINAL WIDGET --- */
+        .terminal {
+            background-color: var(--terminal-bg);
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 40px;
+            overflow: hidden;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .terminal-header {
+            background: #21262d;
+            padding: 10px 15px;
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid #30363d;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+        .terminal-body {
+            padding: 20px;
+            color: #3fb950; /* Hacker Green */
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .command { color: var(--accent); }
+        .output { color: var(--text-muted); margin-bottom: 15px; display: block; }
+
+        /* --- SECTIONS --- */
+        .section-card {
+            background-color: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        .section-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+
+        /* --- PROJECT GRID --- */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .project-card:hover { border-color: var(--purple); }
+        .project-title { font-weight: bold; color: var(--accent); margin-bottom: 10px; display: block; text-decoration: none; font-size: 1.1rem; }
+        .project-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
+        .tech-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            background: #21262d;
+            color: var(--text-main);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+
+        /* --- BADGES & IMAGES --- */
+        .badge-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 20px 0; }
+        img { max-width: 100%; border-radius: 6px; }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; margin-top: 50px; padding-bottom: 20px; color: var(--text-muted); font-size: 0.8rem; }
+        
+        /* Buttons */
+        .btn-social {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background: #238636;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div style="text-align: center;">
+            <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Alberto+Drake;Ethical+Hacker;Full+Stack+Developer;System+Breaker" alt="Typing Header" />
+            <p class="bio">"Breaking code to make it stronger."</p>
+            
+            <div class="badge-container">
+                <a href="https://discord.com/users/YOUR_DISCORD_ID_HERE">
+                    <img src="https://img.shields.io/badge/Discord-Live_Status-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+                </a>
+                <a href="https://github.com/YOUR_USERNAME_HERE">
+                    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" />
+                </a>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <span style="color: #8b949e; font-size: 0.8rem; margin-left: 10px;">root@kali:~</span>
+            </div>
+            <div class="terminal-body">
+                <span class="command">$ whoami</span><br>
+                <span class="output">>> alberto_drake</span>
+                
+                <span class="command">$ cat skills.txt</span><br>
+                <span class="output">>> Pentesting, Network Analysis, Malware Analysis, Full-Stack Dev</span>
+
+                <span class="command">$ uname -a</span><br>
+                <span class="output">>> Linux kali 5.10.0-kali7-amd64 #1 SMP Debian 5.10.28-1kali1</span>
+
+                <span class="command">$ ./start_hack.sh</span><br>
+                <span class="output" style="color: var(--accent);">[+] Initializing modules... <br>[+] Target acquired.<br>[+] Access Granted.</span>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-microchip"></i> Tech Arsenal</h2>
+            <div style="text-align: center;">
+                <img src="https://skillicons.dev/icons?i=java,py,cpp,js,nodejs,mysql,sqlite,linux&theme=dark" alt="Skills" />
+                <br><br>
+                <div class="badge-container">
+                    <img src="https://img.shields.io/badge/Kali_Linux-Verified-557C94?style=for-the-badge&logo=kalilinux&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Metasploit-Pro-10202C?style=for-the-badge&logo=metasploit&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Wireshark-Analyst-1679A7?style=for-the-badge&logo=wireshark&logoColor=white" />
+                    <img src="https://img.shields.io/badge/Nmap-Scanner-10202C?style=for-the-badge&logo=nmap&logoColor=white" />
+                </div>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-code-branch"></i> Featured Operations</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <a href="#" class="project-title">🐍 Python Malware Scanner</a>
+                    <p class="project-desc">A custom static analysis tool to detect common malware signatures in file uploads.</p>
+                    <div>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Security</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="#" class="project-title">🕸️ Network Sniffer</a>
+                    <p class="project-desc">Packet analyzer built in C++ to monitor local traffic and flag suspicious packets.</p>
+                    <div>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Networking</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="#" class="project-title">🔐 Secure Chat App</a>
+                    <p class="project-desc">End-to-end encrypted messaging app using Node.js and Socket.io.</p>
+                    <div>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Crypto</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="#" class="project-title">🐧 Kali Auto-Script</a>
+                    <p class="project-desc">Bash script to automate post-installation setup for Kali Linux environments.</p>
+                    <div>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-chart-line"></i> Activity Log</h2>
+            <div style="text-align: center;">
+                <img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME_HERE&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22" style="width: 100%; max-width: 400px;" />
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME_HERE&theme=tokyonight&hide_border=true&background=161b22" style="width: 100%; max-width: 400px;" />
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h2><i class="fas fa-gamepad"></i> Contribution Map</h2>
+            <img src="https://github.com/YOUR_USERNAME_HERE/YOUR_USERNAME_HERE/blob/output/github-contribution-grid-snake.svg?raw=true" style="width:100%" alt="Snake Animation" />
+        </div>
+
+        <footer>
+            <p>System Status: Online | © 2024 Alberto Drake</p>
+            <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME_HERE&label=System%20Accesses&color=blueviolet&style=flat-square" />
+        </footer>
+
+    </div>
+
+</body>
+</html>
