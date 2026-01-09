@@ -62,7 +62,7 @@ To deploy this OS on your own machine or server:
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/albertodrake/albertodrake.git](https://github.com/albertodrake/albertodrake.git)
+    git clone https://github.com/albertodrake/Readme.git
     cd albertodrake
     ```
 
