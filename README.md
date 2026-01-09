@@ -9,6 +9,12 @@
   <a href="https://discord.com/users/809729227964284959">
     <img src="https://img.shields.io/badge/DISCORD-SECURE_UPLINK-5865F2?style=for-the-badge&logo=discord" alt="Discord" />
   </a>
+  
+  <br /><br />
+  
+  <a href="[https://albertodrake.github.io/Readme">
+    <img src="https://img.shields.io/badge/🚀_CLICK_HERE_TO-LAUNCH_WEBSITE-00FF41?style=for-the-badge&labelColor=black&logoColor=black" height="40" alt="Launch Website" />
+  </a>
 </div>
 
 <br />
@@ -62,7 +68,7 @@ To deploy this OS on your own machine or server:
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/albertodrake/Readme.git
+    git clone [https://github.com/albertodrake/albertodrake.git](https://github.com/albertodrake/albertodrake.git)
     cd albertodrake
     ```
 
@@ -80,7 +86,7 @@ To deploy this OS on your own machine or server:
 
 | **Desktop Environment** |
 |:---:|
-| <img src="https://wallpaperaccess.com/full/1162627.jpg" width="300" /> |
+| <img src="https://wallpaperaccess.com/full/1162627.jpg" width="600" /> |
 
 ---
 
